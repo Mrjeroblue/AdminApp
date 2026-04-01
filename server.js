@@ -25,6 +25,9 @@ pool.query('SELECT NOW()', (err, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('<h1>🚀 Backend de AdminApp Online</h1><p>Conexión a Supabase: OK</p>');
+});
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
